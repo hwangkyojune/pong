@@ -49,8 +49,8 @@ class Simulate:
         # Use the draw_obj() below to draw the ball and players/paddles.
         # e.g., self.ball = self.draw_obj(...)
         self.ball = self.draw_obj(self.pong.ball)
-        self.playerL.obj = self.draw_obj(self.pong.playerL)
-        self.playerR.obj = self.draw_obj(self.pong.playerR)
+        self.playerL = self.draw_obj(self.pong.playerL)
+        self.playerR = self.draw_obj(self.pong.playerR)
 
         self.window.update()
         self.bind_keys()
@@ -59,8 +59,8 @@ class Simulate:
         self.window.listen()
         self.window.onkey(self.pong.playerL_up,"w") #up
         self.window.onkey(self.pong.playerL_down,"s") #down
-        self.window.onkey(self.pong.playerL_down,"38")
-        self.window.onkey(self.pong.playerL_down,"40")
+        self.window.onkey(self.pong.playerR_up,"Up")
+        self.window.onkey(self.pong.playerR_down,"Down")
         # MEMBER-1
         # add four key-events: w,s keys: playerL_up:down, Up,Down arrows: PlayerR_up:down
         # e.g. self.window.onkey(<func_to_run>, <key:string>)#어떤 함수 어떤 키
